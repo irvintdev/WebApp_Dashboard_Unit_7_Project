@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -169,6 +170,53 @@
                 <img src="images/member-4.jpg" alt="Image of Dan Oliver" class="member-image">
                 <p>Dan Oliver posted <bold>WebApp's SEO Tips</bold></p>
                 <p>1 day ago</p>
+            </div>
+        </section>
+
+        <section class="message">
+            <h3>Message User</h3>
+            <form class="messages-container">
+                <input type="text" placeholder="Search for User" class="form-field" id="userField">
+                <textarea placeholder="Message for User" class="form-area" id="messageField"></textarea>
+                <button class="primary-button" id="send">Send</button>
+            </form>
+        </section>
+
+        <section class="settings">
+            <h3>Setting</h3>
+            <label class="switch-light switch-ios" onclick="">
+                <input type="checkbox">
+              
+                <strong>Send Email Notifications</strong>
+              
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+            </label>
+            <label class="switch-light switch-ios" onclick="">
+                <input type="checkbox">
+              
+                <strong>Set Profile to Public</strong>
+              
+                <span>
+                  <span>Off</span>
+                  <span>On</span>
+                  <a></a>
+                </span>
+            </label>
+            <select class="form-field" id="timezone">
+                <option disabled selected>Select Timezone</option>
+                <option>Hawaii-Aleutian Time</option>
+                <option>Alaska Time</option>
+                <option>Pacific Time</option>
+                <option>Mountain Time</option>
+                <option>Eastern Time</option>
+            </select>
+            <div class="setting-buttons">
+                <button class="primary-button" id="save">Save</button>
+                <button class="button-disabled" id="cancel">Cancel</button>
             </div>
         </section>
     </main>
