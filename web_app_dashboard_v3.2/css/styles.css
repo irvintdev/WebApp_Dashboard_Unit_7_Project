@@ -125,12 +125,49 @@ h3 {
     height: 50px;
 }
 
-.traffic {
+.traffic,
+.daily,
+.mobile,
+.social-stats {
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
+    border-bottom: 1px solid rgb(193, 193, 193);
 }
 
 .traffic-nav {
     list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+.temp {
+    height: 100px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.social-container {
+    display: flex;
+    border: 1px solid rgb(193, 193, 193);
+    border-radius: 5px;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+}
+
+.social-image {
+    background-color: rgb(116, 120, 186);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.social-icon {
+    fill: white;
+    transform: scale(50%);
+}
+
+.social-text:nth-child(1) {
+    font-size: larger;
 }
