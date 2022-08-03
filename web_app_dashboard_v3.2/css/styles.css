@@ -70,8 +70,13 @@ header h3 {
     fill: white;
 }
 
-.image {
+.user-image,
+.member-image {
     border-radius: 50%;
+}
+
+.user-image {
+    width: 35px;
 }
 
 .user-image-container {
@@ -80,9 +85,9 @@ header h3 {
     height: 35px;
     align-items: center;
 }
-.user {
+/* .user {
     width: 35px;
-}
+} */
 
 
 .header-right {
@@ -148,14 +153,19 @@ h3 {
     margin-bottom: 10px;
 }
 
+.social-stats h3 {
+    margin-bottom: 10px;
+}
+
 .social-container {
     display: flex;
     border: 1px solid rgb(193, 193, 193);
     border-radius: 5px;
     align-items: center;
     background-color: rgb(245, 245, 245);
+    margin-top: 20px;
     margin-bottom: 20px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .social-image {
@@ -163,7 +173,7 @@ h3 {
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .social-icon {
@@ -184,6 +194,8 @@ h3 {
     margin: 0;
 }
 
-.social-text:nth-child(1) {
-    font-size: larger;
+.member {
+    text-align: center;
+    border-bottom: 1px solid rgb(193, 193, 193);
+    width: 95%;
 }
