@@ -154,6 +154,8 @@ h3 {
     border-radius: 5px;
     align-items: center;
     background-color: rgb(245, 245, 245);
+    margin-bottom: 20px;
+    padding: 5px;
 }
 
 .social-image {
@@ -161,11 +163,25 @@ h3 {
     width: 70px;
     height: 70px;
     border-radius: 50%;
+    margin-left: 10px;
 }
 
 .social-icon {
     fill: white;
     transform: scale(50%);
+}
+
+.social-text {
+    margin-left: 10px;
+}
+
+.social-text p {
+    font-size: 40px;
+    margin: 0;
+}
+
+.social-text h4 {
+    margin: 0;
 }
 
 .social-text:nth-child(1) {
