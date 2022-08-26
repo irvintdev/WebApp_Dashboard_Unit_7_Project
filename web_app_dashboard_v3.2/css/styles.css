@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Martel Sans', sans-serif;
+}
 
 .grid-container {
     display: grid;
@@ -42,10 +45,25 @@ nav {
     padding-bottom: 10px;
     height: 50px;
 }
+.thin {
+    font-weight: 100;
+}
+
+.bold {
+    font-weight: bold;
+}
 
 main {
     grid-area: main;
     display: grid;
+}
+
+main section {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(193, 193, 193);
 }
 
 h1 {
@@ -56,6 +74,22 @@ h1 {
 header h3 {
     font-size: small;
 }
+
+main h3 {
+    text-transform: uppercase;
+    font-size: medium;
+    font-weight: bold;
+}
+.social-text h4 ,
+.member-info a {
+    color: rgb(116, 120, 186);
+}
+
+.member-info a {
+    text-decoration: none;
+    font-size: small;
+}
+
 .temp {
     width: 100%;
 }
@@ -130,7 +164,7 @@ h3 {
     height: 50px;
 }
 
-.traffic,
+/* .traffic,
 .daily,
 .mobile,
 .social-stats,
@@ -142,7 +176,7 @@ h3 {
     padding-right: 10px;
     padding-top: 10px;
     border-bottom: 1px solid rgb(193, 193, 193);
-}
+} */
 
 .traffic-nav {
     list-style-type: none;
@@ -227,7 +261,7 @@ h3 {
 .member-info p,
 .recent-activity p {
     margin: 0;
-    font-size: smaller;
+    font-size: 12px;
 }
 
 input,
@@ -235,8 +269,8 @@ textarea,
 button,
 select {
     width: 100%;
-    padding-top: 5px;
-    margin-bottom: 15px;
+    margin-top: 20px;
+    /* margin-bottom: 15px; */
     border-radius: 5px;
     border: 1px solid rgb(193, 193, 193);;
 }
@@ -256,11 +290,13 @@ select {
 input[type='text'] {
     height: 40px;
     margin-top: 15px;
+    padding-top: 5px;
 }
 textarea {
     height: 100px;
+    padding-top: 7px;
 }
-
+/* ----BUTTONS---- */
 button {
     height: 40px;
 }
@@ -270,6 +306,16 @@ button {
     background-color: rgb(116, 120, 186);
 }
 
+.setting-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+#cancel {
+    background-color: rgb(153, 153, 153);
+    color: white;
+}
+/* --------------- */
 select:invalid {
     color: #999;
 }
@@ -282,10 +328,10 @@ select:invalid {
 }
 
 .switch-ios.switch-light > span {
-    max-width: 100px;
+    max-width: 110px;
     margin-left: auto;
     border: 2px solid rgb(192, 192, 192);
-    height: 37px;;
+    height: 42px;
 }
 
 
@@ -298,3 +344,35 @@ label {
     border-color: rgb(192, 192, 192);
     box-shadow: inset 0 0 0 30px rgb(116, 120, 186);
 }
+
+.switch-ios.switch-light > span span:last-of-type {
+    padding-right: 3.875em;
+}
+
+.switch-ios.switch-light > span span:first-of-type {
+    padding-left: 3.875em;
+}
+
+.switch-ios.switch-light a {
+    border-width: 0.175em;
+    left: 2px;
+    top: 3px;
+    width: 1.9em;
+    height: 1.9em;
+}
+
+.switch-ios.switch-light input:checked ~ span a {
+    /* left: 100%; */
+    border-color: rgb(192, 192, 192);
+    margin-left: -2.3em;
+}
+
+.switch-ios.switch-light > span span {
+    top:4px;
+}
+
+select {
+    margin-top: 40px;
+    height: 40px;;
+}
+
