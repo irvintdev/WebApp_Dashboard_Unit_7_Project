@@ -90,6 +90,10 @@ main h3 {
     font-size: small;
 }
 
+.switch-light strong {
+    font-size: 14px;
+}
+
 .temp {
     width: 100%;
 }
@@ -226,6 +230,8 @@ h3 {
 .social-text p {
     font-size: 40px;
     margin: 0;
+    font-weight: 100;
+    color: rgb(119, 119, 119);
 }
 
 .social-text h4 {
@@ -328,10 +334,10 @@ select:invalid {
 }
 
 .switch-ios.switch-light > span {
-    max-width: 110px;
+    max-width: 100px;
     margin-left: auto;
     border: 2px solid rgb(192, 192, 192);
-    height: 42px;
+    height: 37px;
 }
 
 
@@ -355,20 +361,26 @@ label {
 
 .switch-ios.switch-light a {
     border-width: 0.175em;
-    left: 2px;
+    left: 1px;
     top: 3px;
-    width: 1.9em;
-    height: 1.9em;
+    width: 1.65em;
+    height: 1.65em;
 }
 
 .switch-ios.switch-light input:checked ~ span a {
     /* left: 100%; */
     border-color: rgb(192, 192, 192);
-    margin-left: -2.3em;
+    margin-left: -1.9em;
 }
 
 .switch-ios.switch-light > span span {
     top:4px;
+}
+
+.switch span {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 100;
 }
 
 select {
@@ -376,3 +388,7 @@ select {
     height: 40px;;
 }
 
+.member:last-of-type ,
+.recent-activity:last-of-type {
+    padding-bottom: 0;
+}
