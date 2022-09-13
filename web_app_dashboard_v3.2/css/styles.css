@@ -2,6 +2,8 @@
     box-sizing: border-box;
 }
 
+
+
 body {
     font-family: 'Martel Sans', sans-serif;
 }
@@ -392,3 +394,4 @@ select {
 .recent-activity:last-of-type {
     padding-bottom: 0;
 }
+
