@@ -395,3 +395,9 @@ select {
     padding-bottom: 0;
 }
 
+.widget-container-quarter {
+    max-width: 300px;
+    margin: 0 auto;
+    height: 250px;
+}
+
