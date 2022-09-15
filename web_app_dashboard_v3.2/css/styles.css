@@ -395,9 +395,11 @@ select {
     padding-bottom: 0;
 }
 
-.widget-container-quarter {
+.widget-container-quarter,
+.widget-container-full,
+.widget-container-half {
     max-width: 300px;
     margin: 0 auto;
-    height: 250px;
+    /* height: 250px; */
 }
 
