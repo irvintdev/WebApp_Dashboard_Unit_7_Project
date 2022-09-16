@@ -61,6 +61,7 @@ main {
 }
 
 main section {
+    width: 100vw;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 20px;
@@ -148,6 +149,7 @@ h3 {
 
 .main-header {
     display: flex;
+    margin-bottom: 15px;
 }
 
 .main-header {
@@ -157,9 +159,10 @@ h3 {
 }
 
 .headline {
-    font-size: larger;
+    font-size: 17px;
     padding-left: 10px;
     padding-right: 10px;
+    width: 115px;
 }
 
 .tab {
@@ -187,8 +190,10 @@ h3 {
 .traffic-nav {
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
     padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 5px;
 }
 
 .temp {
@@ -395,11 +400,101 @@ select {
     padding-bottom: 0;
 }
 
-.widget-container-quarter,
 .widget-container-full,
 .widget-container-half {
-    max-width: 300px;
+    width: 95vw;
     margin: 0 auto;
     /* height: 250px; */
 }
 
+canvas {
+    padding-top: 20px;
+}
+
+.traffic-nav-link {
+    padding: 10px;
+    text-align: center;
+}
+
+.traffic-nav-link:first-of-type {
+    padding: 10px;
+    background: rgb(145,199,148);
+    width: 75px;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+}
+
+.alert-banner {
+    display: flex;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 35px;
+    border-radius: 5px;
+    width: 95vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(116, 120, 186);
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.alert-banner-close {
+    text-decoration: none;
+    color: white;
+    transition-duration: 500ms;
+}
+.alert-banner-close:hover {
+    font-weight: bolder;
+    font-size: 20px;
+    /* text-transform: capitalize; */
+
+}
+
+@media screen and (min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template: auto;
+        grid-template-areas: 
+            "header header "
+            "navigation main";
+    }
+
+    nav {
+        width: 65px;
+    }
+
+    .nav-container {
+        display: grid;
+        width: initial;
+    }
+
+    main {
+        width: 100%;
+    }    
+
+    .daily ,
+    .mobile {
+        width: 50vw;
+    }
+
+    .mobile {
+        border-left: 1px solid rgb(193, 193, 193);
+    }
+
+    .widget-container-half {
+        width: 95%;
+    }
+    
+    .side-by-side {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-stats h3 {
+        display: inline-block;
+    }
+}
