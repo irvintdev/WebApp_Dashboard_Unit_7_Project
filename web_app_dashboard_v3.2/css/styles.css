@@ -2,11 +2,11 @@
     box-sizing: border-box;
 }
 
-
-
 body {
     font-family: 'Martel Sans', sans-serif;
 }
+
+/* ---- Layout ---- */
 
 .grid-container {
     display: grid;
@@ -17,6 +17,7 @@ body {
         "navigation"
         "main";
 }
+
 
 header {
     background-color: rgb(116, 120, 186);
@@ -47,6 +48,8 @@ nav {
     padding-bottom: 10px;
     height: 50px;
 }
+
+/* ---- Typography ---- */
 .thin {
     font-weight: 100;
 }
@@ -55,22 +58,7 @@ nav {
     font-weight: bold;
 }
 
-main {
-    grid-area: main;
-    display: grid;
-}
-
-main section {
-    width: 100vw;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgb(193, 193, 193);
-}
-
 h1 {
-    /* flex-basis: 60%; */
     font-size: larger;
 }
 
@@ -83,6 +71,7 @@ main h3 {
     font-size: medium;
     font-weight: bold;
 }
+
 .social-text h4 ,
 .member-info a {
     color: rgb(116, 120, 186);
@@ -93,18 +82,44 @@ main h3 {
     font-size: small;
 }
 
+.member p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 100;
+    font-size: 13px;
+}
+
 .switch-light strong {
     font-size: 14px;
 }
 
-.temp {
-    width: 100%;
+
+
+
+
+
+main {
+    grid-area: main;
+    display: grid;
 }
 
-/* .notification-bell {
-    display: flex;
-    justify-content: right;
-} */
+main section {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgb(193, 193, 193);
+}
+
+
+
+
+
+
+
+
+
 
 .bell {
     width: 20px;
@@ -126,9 +141,7 @@ main h3 {
     height: 35px;
     align-items: center;
 }
-/* .user {
-    width: 35px;
-} */
+
 
 
 .header-right {
@@ -147,6 +160,10 @@ h3 {
     filter: brightness(0) invert(1);
 }
 
+main {
+    display: grid;
+}
+
 .main-header {
     display: flex;
     margin-bottom: 15px;
@@ -160,9 +177,9 @@ h3 {
 
 .headline {
     font-size: 17px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 115px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 125px;
 }
 
 .tab {
@@ -252,8 +269,8 @@ h3 {
     padding-top: 15px;
     padding-bottom: 15px;
     margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
     /* line-height: 2px; */
 }
 
@@ -264,7 +281,7 @@ h3 {
 
 .members-container {
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
 }
 
 .member-image {
@@ -272,7 +289,7 @@ h3 {
 }
 
 .member-info p,
-.recent-activity p {
+.recent-activity-info p {
     margin: 0;
     font-size: 12px;
 }
@@ -285,7 +302,7 @@ select {
     margin-top: 20px;
     /* margin-bottom: 15px; */
     border-radius: 5px;
-    border: 1px solid rgb(193, 193, 193);;
+    border: 1px solid rgb(193, 193, 193);
 }
 
 input,
@@ -402,7 +419,7 @@ select {
 
 .widget-container-full,
 .widget-container-half {
-    width: 95vw;
+    width: 95%;
     margin: 0 auto;
     /* height: 250px; */
 }
@@ -425,6 +442,11 @@ canvas {
     color: white;
 }
 
+.alert {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .alert-banner {
     display: flex;
     margin: 0 auto;
@@ -432,7 +454,7 @@ canvas {
     padding-right: 15px;
     height: 35px;
     border-radius: 5px;
-    width: 95vw;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(116, 120, 186);
@@ -453,40 +475,50 @@ canvas {
 
 }
 
+.arrow {
+    margin-left: auto;
+    display: none;
+}
 @media screen and (min-width: 768px) {
     .grid-container {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template: auto;
+        grid-template-columns: 55px 1fr;
         grid-template-areas: 
             "header header "
             "navigation main";
     }
 
-    nav {
-        width: 65px;
+    main {
+        display: grid;
+        grid-template-columns: 50%;
     }
+
+    .traffic,
+    .social-stats ,
+    .main-header,
+    .alert ,
+    .members,
+    .activity,
+    .message ,
+    .settings {
+        grid-column: 1 / span 2;
+    }
+
+    .daily {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile {
+        grid-column:  2 / span 1;
+    }
+    
 
     .nav-container {
+        width: 55px;
         display: grid;
-        width: initial;
-    }
-
-    main {
-        width: 100%;
-    }    
-
-    .daily ,
-    .mobile {
-        width: 50vw;
     }
 
     .mobile {
         border-left: 1px solid rgb(193, 193, 193);
-    }
-
-    .widget-container-half {
-        width: 95%;
     }
     
     .side-by-side {
@@ -494,7 +526,28 @@ canvas {
         justify-content: space-between;
     }
 
-    .social-stats h3 {
-        display: inline-block;
+    .social-container {
+        width: 32.5%;
     }
+
+    .arrow {
+        display: contents;
+        margin-left: auto;
+    }
+    
+
+    .member,
+    .recent-activity {
+        display: flex;
+        align-items: center;
+    }
+
+    
+
+    .member p {
+        margin-left: auto;
+    }
+
+    
+
 }
