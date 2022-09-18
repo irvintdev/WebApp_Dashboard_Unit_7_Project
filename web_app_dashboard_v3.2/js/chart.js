@@ -18,10 +18,10 @@ const trafficData = {
 const trafficOptions = {
     backgroundColor: 'rgba(112, 104, 201, .5)',
     fill: true,
-    aspectRatio: 1.99,
-    // animation: {
-    //     duration: 0
-    // },
+    aspectRatio: 2.5,
+    animation: {
+        duration: 0
+    },
     scales: {
         y : {
             beginAtZero: true
@@ -84,7 +84,7 @@ const mobileData = {
 
     datasets: [{
         label: 'Mobile Users',
-        data: [300, 125, 125],
+        data: [2000, 550, 500],
         backgroundColor: [
             'rgb(116, 120, 186)',
             'rgb(145, 199, 148)',
