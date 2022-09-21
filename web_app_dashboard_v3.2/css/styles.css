@@ -93,6 +93,10 @@ main h3 {
     font-size: 14px;
 }
 
+::placeholder {
+    opacity: 0.3;
+}
+
 
 
 
@@ -323,12 +327,16 @@ input[type='text'] {
     padding-top: 5px;
 }
 textarea {
-    height: 100px;
+    height: 140px;
     padding-top: 7px;
 }
 /* ----BUTTONS---- */
 button {
     height: 40px;
+}
+
+#send {
+    margin-top: 15px;
 }
 
 .primary-button {
@@ -346,6 +354,29 @@ button {
     color: white;
 }
 /* --------------- */
+
+.cselect select{ /* removes the default arrow */
+    appearance: none;
+}
+
+.cselect::after {
+    content: "\25be";
+}
+
+.cselect {
+    position: relative;
+}
+
+.cselect::after {
+    position: absolute;
+    top: 60px;
+    right: 15px;
+    color: rgb(116, 120, 186);
+    background-color: rgb(245, 245, 245);
+    scale: 1.5;
+    
+}
+
 select:invalid {
     color: #999;
 }
@@ -353,8 +384,14 @@ select:invalid {
 .switch-light {
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 300px;
     justify-content: space-between;
+    margin-top: 20px;
+
+}
+
+.switch-light:last-of-type {
+    margin-top: 35px;
 }
 
 .switch-ios.switch-light > span {
@@ -408,9 +445,15 @@ label {
 }
 
 select {
-    margin-top: 40px;
+    margin-top: 46px;
     height: 40px;;
 }
+
+:focus {
+    outline: 2px solid rgb(116, 120, 186);
+}
+
+
 
 .member:last-of-type ,
 .recent-activity:last-of-type {
@@ -479,6 +522,14 @@ canvas {
     margin-left: auto;
     display: none;
 }
+
+.green-circle {
+    width: 10px;
+    height: 10px;
+}
+
+
+
 @media screen and (min-width: 768px) {
     .grid-container {
         grid-template-columns: 55px 1fr;
@@ -515,6 +566,11 @@ canvas {
     .nav-container {
         width: 55px;
         display: grid;
+        padding-top: 0;
+    }
+
+    .nav-container > a {
+        padding-top: 20px;
     }
 
     .mobile {
@@ -532,6 +588,7 @@ canvas {
 
     .arrow {
         display: contents;
+        color: rgb(116, 120, 186);
         margin-left: auto;
     }
     
@@ -540,6 +597,17 @@ canvas {
     .recent-activity {
         display: flex;
         align-items: center;
+        justify-content: space-between;
+    }
+
+    .member-info ,
+    .recent-activity-info {
+        text-align: left;
+        margin-left: 15px;
+    }
+
+    .recent-activity-info {
+        margin-right: auto;
     }
 
     
@@ -551,3 +619,21 @@ canvas {
     
 
 }
+
+@media screen and (min-width: 1024px) {
+    .members ,
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .activity ,
+    .settings {
+        grid-column: 2 / span 1;
+        border-left: 1px solid rgb(193, 193, 193);
+    }
+
+    
+}
+
+
+
